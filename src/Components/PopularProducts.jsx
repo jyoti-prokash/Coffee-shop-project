@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import banner from '../assets/images/more/1.png'
 import { BsCup } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,8 @@ import { MdDelete, MdEditSquare } from 'react-icons/md';
 import Swal from 'sweetalert2';
 
 const PopularProducts = ({coffee:data}) => {
+    
+    // const [coffees,setCoffees] = useState(data);
     const handleDelete = (_id) =>{
         Swal.fire({
   title: "Are you sure?",
@@ -30,8 +32,9 @@ const PopularProducts = ({coffee:data}) => {
       text: "Your file has been deleted.",
       icon: "success"
     });
+    // const remaining = coffees.filter(coffee=>coffee._id !== id)
+    // setCoffees(remaining)
         }
-        
     })
   }
 });
